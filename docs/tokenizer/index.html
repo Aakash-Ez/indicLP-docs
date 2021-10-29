@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.87.0" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Tokenizer - Method </title>
+
+  
+  <meta name="description" content="Method to perform tokenization on sentences."> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="Aakash and Adityan">
+
+
+  <meta property="og:title" content="Tokenizer - Method" />
+<meta property="og:description" content="Method to perform tokenization on sentences." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aakash-ez.github.io/indicLP-docs/docs/tokenizer/" /><meta property="article:section" content="docs" />
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="https://aakash-ez.github.io/indicLP-docs/docs/tokenizer/">  
+
+  <link rel="shortcut icon" type="image/png" href="/indicLP-docs/img/favicons/favicon.png">
+
+
+  <link href="/indicLP-docs/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/main.css" rel="stylesheet" type="text/css">
+  
+
+ <link href="/indicLP-docs/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/indicLP-docs/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/indicLP-docs/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">indicLP</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/indicLP-docs" title="home">indicLP</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/indicLP-docs/blog/" >Blog</a></li>
+    
+    <li><a href="/indicLP-docs/docs/" >Docs</a></li>
+    
+    <li><a href="/indicLP-docs/faq/" >Faq</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+  <div id="main">
+    <div id="hero">
+      <h1> Tokenizer - Method </h1>
+      <p class="hero-lead">
+           A method of TextNormalizer class to perform tokenization on sentences.
+      </p>
+
+    </div> 
+    <div id="kube-component" class="content">
+    
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+
+tocSelector: '.js-toc',
+
+contentSelector: '.content',
+
+headingSelector: 'h3'
+})
+}
+);
+</script>
+
+
+
+    
+
+
+<h3 class="section-head" id="h-basic-template"><a href="#h-basic-template">Getting Started</a></h3>
+
+<p>Tokenizer function is one of the most necessary method when it comes to preprocessing in NLP.</p>
+
+
+<h5>Example</h5>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># coding:utf-8</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">indicLP.preproccessing</span> <span style="color: #008800; font-weight: bold">import</span> TextNormalizer
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">re</span>
+
+language <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;hi&quot;</span>
+
+normalizerHindi <span style="color: #333333">=</span> TextNormalizer(language)
+
+text <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot; नमस्ते! आप कैसे हैं? मुझे आपकी बहुत याद आयी।&quot;</span>
+text <span style="color: #333333">=</span> re<span style="color: #333333">.</span>split(<span style="background-color: #fff0f0">&#39;[।;?\.!]&#39;</span>,text)
+text <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">filter</span>(<span style="color: #007020">None</span>, text))
+
+<span style="color: #008800; font-weight: bold">print</span>(text)
+<span style="color: #888888"># Output is [&#39; नमस्ते&#39;, &#39; आप कैसे हैं&#39;, &#39; मुझे आपकी बहुत याद आयी&#39;]</span>
+
+out <span style="color: #333333">=</span> normalizerHindi<span style="color: #333333">.</span>tokenizer(text, stem <span style="color: #333333">=</span> <span style="color: #007020">True</span>)
+<span style="color: #008800; font-weight: bold">print</span>(out)
+<span style="color: #888888"># Output is [[&#39;▁नमस्त&#39;], [&#39;▁आप&#39;, &#39;▁कैस&#39;, &#39;▁हैं&#39;], [&#39;▁मुझ&#39;, &#39;▁आपक&#39;, &#39;▁बहुत&#39;, &#39;▁याद&#39;, &#39;▁आय&#39;]]</span>
+
+out <span style="color: #333333">=</span> normalizerHindi<span style="color: #333333">.</span>tokenizer(text, stem <span style="color: #333333">=</span> <span style="color: #007020">False</span>)
+<span style="color: #008800; font-weight: bold">print</span>(out)
+<span style="color: #888888"># Output is [[&#39;▁नमस्ते&#39;], [&#39;▁आप&#39;, &#39;▁कैसे&#39;, &#39;▁हैं&#39;], [&#39;▁मुझे&#39;, &#39;▁आपकी&#39;, &#39;▁बहुत&#39;, &#39;▁याद&#39;, &#39;▁आयी&#39;]]</span>
+</pre></div>
+
+<br>
+
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Input Arguments</a></h3>
+
+<p>Following are the input arguments to be provided while using tokenizer method:</p>
+<ul>
+    <li><b>inp_list: </b>A list of strings, containing the sentences to be tokenized.</li>
+    <li><b>stem: </b>A boolean value to determine is words must be stemmed or not. Default is True.</li>
+</ul>
+
+
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Reference Materials</a></h3>
+
+<p>Following are some reference materials for Tokenizer Method</p>
+<ul>
+    <li><a href="/indicLP-docs/blog/tokenizer/" style="color: inherit;text-decoration: inherit;"><b>Tokenizing Sentences: </b></a>
+    A reference blogpost discussing the usage of TextNormalizer Class in hardcoded string.</li>
+    <li><a href="https://web.stanford.edu/~jurafsky/slp3/slides/2_TextProc.pdf" style="color: inherit;text-decoration: inherit;"><b>Text Normalization: </b></a>
+    Jurafsky NLP slides on text processing provided by Stanford.</li>
+</ul>
+
+
+
+
+
+    
+    </div>
+    </div>
+    </main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>iNLP</span></li>
+        <li>
+          <a href="/indicLP-docs/blog/">Blog</a>
+        </li>
+          <li>
+          <a href="/indicLP-docs/docs/">Docs</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/">Give a shout-out on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; Licence MIT.</p>
+  </footer> </footer>
+
+
+  <script src="/indicLP-docs/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/indicLP-docs/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/indicLP-docs/js/main.js" type="text/javascript">
+  </script>
+</body>
+
+</html>

@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Quick Start </title>
+  <title> Preprocessing </title>
 
   
-  <meta name="description" content="Up and running in under a minute"> 
+  <meta name="description" content="Cleaning up the Text for you."> 
   
   
   
@@ -21,10 +21,10 @@
   <meta name="author" content="Aakash and Adityan">
 
 
-  <meta property="og:title" content="Quick Start" />
-<meta property="og:description" content="Up and running in under a minute" />
+  <meta property="og:title" content="Preprocessing" />
+<meta property="og:description" content="Cleaning up the Text for you." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://aakash-ez.github.io/indicLP-docs/docs/quick-start/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="https://aakash-ez.github.io/indicLP-docs/docs/preprocessing/" /><meta property="article:section" content="docs" />
 
 
 
@@ -40,7 +40,7 @@
   
   
 
-  <link rel="canonical" href="https://aakash-ez.github.io/indicLP-docs/docs/quick-start/">  
+  <link rel="canonical" href="https://aakash-ez.github.io/indicLP-docs/docs/preprocessing/">  
 
   <link rel="shortcut icon" type="image/png" href="/indicLP-docs/img/favicons/favicon.png">
 
@@ -95,9 +95,9 @@
   <main>
   <div id="main">
     <div id="hero">
-      <h1> Quick Start </h1>
+      <h1> Preprocessing </h1>
       <p class="hero-lead">
-           Intending to be an all encompassing library for Indic Natural Language Processing tasks, indicLP has been constantly thriving to add more features and languages to it, thus making the scope of AI reach every individual irrespective of what language they speak.
+           indicLP's Preprocessing module provides developers with a wide variety of tools and functions to make their NLP journey easier.
       </p>
 
     </div> 
@@ -127,29 +127,41 @@ headingSelector: 'h3'
     
 
 
-<h3 class="section-head" id="h-basic-template"><a href="#h-basic-template">Installation</a></h3>
+<h3 class="section-head" id="h-basic-template"><a href="#h-basic-template">Getting Started</a></h3>
 
-<p>indicLP is an easy to install library, making itself available through pip for all python users, while also providing github repository for direct cloning.</p>
+<p>Preprocessing Library contains all the necessary tools to clean the input text before passing it to a model.</p>
 
 
-<h5>Installation through pip package</h5>
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">pip install indicLP
+<h5>Example</h5>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">indicLP.preproccessing</span> <span style="color: #008800; font-weight: bold">import</span> TextNormalizer, Embedding
+
+language <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;ta&quot;</span>
+
+normalizerTamil <span style="color: #333333">=</span> TextNormalizer(language)
+embedder <span style="color: #333333">=</span> Embedding(lang<span style="color: #333333">=</span>language)
 </pre></div>
+
+
 <br>
 
-<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Prerequisite Libraries</a></h3>
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Classes Contained</a></h3>
 
-<p>indicLP requires the following libraries for comfortable execution:</p>
+<p>Following are the classes contained in preprocessing module:</p>
 <ul>
-    <li>torchtext</li>
-    <li>snowballstemmer</li>
-    <li>indic_transliteration</li>
-    <li>gensim</li>
-    <li>pickle</li>
-    <li>tarfile</li>
+    <li><b>TextNormalizer: </b>Class to perform tasks such as tokenizing, stopword removal and stemming.</li>
+    <li><b>Embedding: </b>Class for performing word embedding and finding closely associated words.</li>
 </ul>
 
 
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Reference Materials</a></h3>
+
+<p>Following are some reference materials for Preprocessing module</p>
+<ul>
+    <li><a href="/indicLP-docs/blog/tokenizer/" style="color: inherit;text-decoration: inherit;"><b>Tokenizing Sentences: </b></a>
+    A reference blogpost discussing the usage of TextNormalizer Class in hardcoded string.</li>
+    <li><a href="/indicLP-docs/blog/word-embedding/" style="color: inherit;text-decoration: inherit;"><b>Word Embedding: </b></a>
+    A reference blogpost discussing the usage of Embedding Class in hardcoded string.</li>
+</ul>
 
 
 

@@ -24,8 +24,90 @@
       
       <guid>https://aakash-ez.github.io/indicLP-docs/docs/quick-start/</guid>
       <description>InstallationindicLP is an easy to install library, making itself available through pip for all python users, while also providing github repository for direct cloning.
- Installation through pip packagepip install indicLPPrerequisite LibrariesindicLP requires the following libraries for comfortable execution:
+Installation through pip packagepip install indicLPPrerequisite LibrariesindicLP requires the following libraries for comfortable execution:
 torchtextsnowballstemmerindic_transliterationgensimpickletarfile</description>
+    </item>
+    
+    <item>
+      <title>Preprocessing</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/preprocessing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/preprocessing/</guid>
+      <description>Getting StartedPreprocessing Library contains all the necessary tools to clean the input text before passing it to a model.
+Examplefrom indicLP.preproccessing import TextNormalizer, Embeddinglanguage = &amp;quot;ta&amp;quot;normalizerTamil = TextNormalizer(language)embedder = Embedding(lang=language)Classes ContainedFollowing are the classes contained in preprocessing module:
+TextNormalizer: Class to perform tasks such as tokenizing, stopword removal and stemming.Embedding: Class for performing word embedding and finding closely associated words.</description>
+    </item>
+    
+    <item>
+      <title>TextNormalizer</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/textnormalizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/textnormalizer/</guid>
+      <description>Getting StartedTextNormalizer class provides functions like tokenizer, stop word removal and stemmer, to normalize the corpora before training the machine learning models.
+Example# coding:utf-8from indicLP.preproccessing import TextNormalizer, Embeddingimport relanguage = &amp;quot;hi&amp;quot;normalizerHindi = TextNormalizer(language)text = &amp;quot; नमस्ते! आप कैसे हैं? मुझे आपकी बहुत याद आयी।&amp;quot;text = re.split(&amp;#39;[।;?\.!]&amp;#39;,text)text = list(filter(None, text))print(text)# Output is [&amp;#39; नमस्ते&amp;#39;, &amp;#39; आप कैसे हैं&amp;#39;, &amp;#39; मुझे आपकी बहुत याद आयी&amp;#39;]out = normalizerHindi.</description>
+    </item>
+    
+    <item>
+      <title>Tokenizer - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/tokenizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/tokenizer/</guid>
+      <description>Getting StartedTokenizer function is one of the most necessary method when it comes to preprocessing in NLP.
+Example# coding:utf-8from indicLP.preproccessing import TextNormalizerimport relanguage = &amp;quot;hi&amp;quot;normalizerHindi = TextNormalizer(language)text = &amp;quot; नमस्ते! आप कैसे हैं? मुझे आपकी बहुत याद आयी।&amp;quot;text = re.split(&amp;#39;[।;?\.!]&amp;#39;,text)text = list(filter(None, text))print(text)# Output is [&amp;#39; नमस्ते&amp;#39;, &amp;#39; आप कैसे हैं&amp;#39;, &amp;#39; मुझे आपकी बहुत याद आयी&amp;#39;]out = normalizerHindi.</description>
+    </item>
+    
+    <item>
+      <title>Stem - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/stem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/stem/</guid>
+      <description>Getting StartedTokenizer function is one of the most necessary method when it comes to preprocessing in NLP.
+Example# coding:utf-8from indicLP.preproccessing import TextNormalizerlanguage = &amp;quot;hi&amp;quot;normalizerHindi = TextNormalizer(language)text = &amp;quot;खिलाड़ियों&amp;quot;print(normalizerHindi.stem(text))# Output is &amp;quot;खिलाड़&amp;quot;language = &amp;quot;ta&amp;quot;normalizerTamil = TextNormalizer(language)text = &amp;quot;பெண்கள்&amp;quot;print(normalizerTamil.stem(text))# Output is &amp;quot;பெண்&amp;quot;Input ArgumentsFollowing are the input arguments to be provided while using stem method:
+word: A string word that has to be stemmed.</description>
+    </item>
+    
+    <item>
+      <title>Remove Stop Words - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/remove-stop-words/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/remove-stop-words/</guid>
+      <description>Getting Startedremove_stop_words method in Embedding class can be used to perform stopword removal in input list.
+Example# coding:utf-8from indicLP.preproccessing import TextNormalizerimport relanguage = &amp;quot;hi&amp;quot;normalizerHindi = TextNormalizer(language)text = &amp;quot; नमस्ते! आप कैसे हैं? मुझे आपकी बहुत याद आयी।&amp;quot;text = re.split(&amp;#39;[।;?\.!]&amp;#39;,text)text = list(filter(None, text))print(text)# Output is [&amp;#39; नमस्ते&amp;#39;, &amp;#39; आप कैसे हैं&amp;#39;, &amp;#39; मुझे आपकी बहुत याद आयी&amp;#39;]out = normalizerHindi.</description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/embedding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/embedding/</guid>
+      <description>Getting StartedEmbedding is a necessary functionality in modern NLP as most models and algorithms require real number data and not string such as words and sentences. The Embedding library is built on top of Gensim Library.
+Example# coding:utf-8from indicLP.preproccessing import Embeddinglanguage = &amp;quot;ta&amp;quot;word = &amp;quot;புத்தகம்&amp;quot;embedder = Embedding(lang=language)print(embedder.get_vector(word).shape)#Output is (300,)print(embedder.get_closest(word))# Output is [(&amp;#39;நாவல்&amp;#39;, 0.8771955370903015), (&amp;#39;கட்டுர்&amp;#39;, 0.8479164242744446), (&amp;#39;கட்டுரை&amp;#39;, 0.8334720134735107), (&amp;#39;பதிப்பி&amp;#39;, 0.8099671006202698), (&amp;#39;பத்திரிக்கை&amp;#39;, 0.</description>
+    </item>
+    
+    <item>
+      <title>Get Vector - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/get-vector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/get-vector/</guid>
+      <description>Getting StartedGet Vector function provides the embedding vector for a given input argument.
+Example# coding:utf-8from indicLP.preproccessing import Embeddinglanguage = &amp;quot;ta&amp;quot;word = &amp;quot;புத்தகம்&amp;quot;embedder = Embedding(lang=language)print(embedder.get_vector(word))#Output is:# [-0.38245687 -0.43007085 0.75659156 -0.029661 0.42061085 -0.78045815# -0.28127694 -1.0599478 -0.1264891 -0.42795 0.39396504 -0.79804516# 0.03756442 0.24138477 -0.1513924 0.31122482 0.46426052 -1.2080644# -0.40227187 0.7438162 -0.4533786 0.40707597 -0.25478044 0.19656514# 0.5389387 0.2874967 0.43010154 0.13535404 -0.4051279 0.03866816 ...Input ArgumentsFollowing are the input arguments to be provided while using get_vector method:</description>
+    </item>
+    
+    <item>
+      <title>Get Closest - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/get-closest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/get-closest/</guid>
+      <description>Getting StartedGet Closest function provides the N closely associated words for the given input string.
+Example# coding:utf-8from indicLP.preproccessing import Embeddinglanguage = &amp;quot;ta&amp;quot;word = &amp;quot;பள்ளி&amp;quot;embedder = Embedding(lang=language)for i in closest:(word, score) = iprint(word,round(score,2))# பாடசாலை 0.87# உயர்நில் 0.86# கல்லூரி 0.85# பாடசால் 0.84# உயர்நிலைப்பள்ளி 0.81# மேல்நில் 0.81# பள்ளிக்கூடம் 0.79# கல் 0.78# மாண 0.77# படிப்பு 0.</description>
     </item>
     
     <item>

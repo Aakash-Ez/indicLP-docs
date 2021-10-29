@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.87.0" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Embedding </title>
+
+  
+  <meta name="description" content="A class to perform word embedding."> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="Aakash and Adityan">
+
+
+  <meta property="og:title" content="Embedding" />
+<meta property="og:description" content="A class to perform word embedding." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aakash-ez.github.io/indicLP-docs/docs/embedding/" /><meta property="article:section" content="docs" />
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="https://aakash-ez.github.io/indicLP-docs/docs/embedding/">  
+
+  <link rel="shortcut icon" type="image/png" href="/indicLP-docs/img/favicons/favicon.png">
+
+
+  <link href="/indicLP-docs/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/main.css" rel="stylesheet" type="text/css">
+  
+
+ <link href="/indicLP-docs/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/indicLP-docs/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/indicLP-docs/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">indicLP</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/indicLP-docs" title="home">indicLP</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/indicLP-docs/blog/" >Blog</a></li>
+    
+    <li><a href="/indicLP-docs/docs/" >Docs</a></li>
+    
+    <li><a href="/indicLP-docs/faq/" >Faq</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+  <div id="main">
+    <div id="hero">
+      <h1> Embedding </h1>
+      <p class="hero-lead">
+           Embedding provides the necessary functions to perform word embedding.
+      </p>
+
+    </div> 
+    <div id="kube-component" class="content">
+    
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+
+tocSelector: '.js-toc',
+
+contentSelector: '.content',
+
+headingSelector: 'h3'
+})
+}
+);
+</script>
+
+
+
+    
+
+
+<h3 class="section-head" id="h-basic-template"><a href="#h-basic-template">Getting Started</a></h3>
+
+<p>Embedding is a necessary functionality in modern NLP as most models and algorithms require real number data and not string such as words and sentences. The Embedding library is built on top of Gensim Library.</p>
+
+
+<h5>Example</h5>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"># coding:utf-8</span>
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">indicLP.preproccessing</span> <span style="color: #008800; font-weight: bold">import</span> Embedding
+
+language <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;ta&quot;</span>
+
+word <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&quot;புத்தகம்&quot;</span>
+embedder <span style="color: #333333">=</span> Embedding(lang<span style="color: #333333">=</span>language)
+
+<span style="color: #008800; font-weight: bold">print</span>(embedder<span style="color: #333333">.</span>get_vector(word)<span style="color: #333333">.</span>shape)
+<span style="color: #888888">#Output is (300,)</span>
+
+<span style="color: #008800; font-weight: bold">print</span>(embedder<span style="color: #333333">.</span>get_closest(word))
+<span style="color: #888888"># Output is [(&#39;நாவல்&#39;, 0.8771955370903015), (&#39;கட்டுர்&#39;, 0.8479164242744446), (&#39;கட்டுரை&#39;, 0.8334720134735107), (&#39;பதிப்பி&#39;, 0.8099671006202698), (&#39;பத்திரிக்கை&#39;, 0.793248176574707), (&#39;தலைப்பு&#39;, 0.7890440821647644), (&#39;எழுதி&#39;, 0.7842222452163696), (&#39;கவிதை&#39;, 0.782835841178894), (&#39;நூலை&#39;, 0.780312716960907), (&#39;தியாயம்&#39;, 0.7802311778068542)]</span>
+</pre></div>
+<br>
+
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Methods Involved</a></h3>
+
+<p>Following are the methods contained in TextNormalizer Class:</p>
+<ul>
+    <li><b>Get Vector: </b>A method to receive the vector associated with the word.</li>
+    <li><b>Get Closest: </b>A method to get the n closest words to the provided word.</li>
+</ul>
+
+
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Reference Materials</a></h3>
+
+<p>Following are some reference materials for Embedding module</p>
+<ul>
+    <li><a href="/indicLP-docs/blog/word-embedding/" style="color: inherit;text-decoration: inherit;"><b>Word Embedding: </b></a>
+    A reference blogpost discussing the usage of Embedding Class in hardcoded string.</li>
+    <li><a href="https://rcpedia.stanford.edu/topicGuides/textProcessingWord_Embeddings.html" style="color: inherit;text-decoration: inherit;"><b>Stanford RCpedia: </b></a>
+    RCpedia NLP slides on word embeddings provided by Stanford.</li>
+</ul>
+
+
+
+
+
+    
+    </div>
+    </div>
+    </main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>iNLP</span></li>
+        <li>
+          <a href="/indicLP-docs/blog/">Blog</a>
+        </li>
+          <li>
+          <a href="/indicLP-docs/docs/">Docs</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/">Give a shout-out on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; Licence MIT.</p>
+  </footer> </footer>
+
+
+  <script src="/indicLP-docs/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/indicLP-docs/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/indicLP-docs/js/main.js" type="text/javascript">
+  </script>
+</body>
+
+</html>
