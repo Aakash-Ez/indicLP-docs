@@ -6,7 +6,7 @@
     <description>Recent content on indicLP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0100</lastBuildDate><atom:link href="https://aakash-ez.github.io/indicLP-docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 00:01:00 +0100</lastBuildDate><atom:link href="https://aakash-ez.github.io/indicLP-docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tokenizing Sentences</title>
       <link>https://aakash-ez.github.io/indicLP-docs/blog/tokenizer/</link>
@@ -38,6 +38,16 @@
     </item>
     
     <item>
+      <title>Word Embedding</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/blog/word-embedding/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/blog/word-embedding/</guid>
+      <description>Getting Started Word Embedding has become one of the most crucial aspect of NLP tasks, as it helps in representing the meaning of words in a way computer can understand. Let us first consider the definition of Word Embedding, provided by Stanford&amp;rsquo;s RCpedia:
+ Word Embeddings are a method to translate a string of text into an N-dimensional vector of real numbers. Many computational methods are not capable of accepting text as input.</description>
+    </item>
+    
+    <item>
       <title>Typography</title>
       <link>https://aakash-ez.github.io/indicLP-docs/docs/typography/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -48,22 +58,12 @@
     </item>
     
     <item>
-      <title>Typography with kube</title>
-      <link>https://aakash-ez.github.io/indicLP-docs/blog/typography/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Transliteration in indicLP</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/blog/transliteration/</link>
+      <pubDate>Fri, 29 Oct 2021 00:01:00 +0100</pubDate>
       
-      <guid>https://aakash-ez.github.io/indicLP-docs/blog/typography/</guid>
-      <description>Get StartedTypography of Kube based on the 4px horizontal grid, it means that for the headers, paragraphs, quotes and any other texts chosen are a combination of line-height, that fit into the 4px grid and help set the horizontal rhythm of design by default.
-4px grid for typography - the magic of the horizontal rhythmWith this feature, you can quickly and easily make a solid and harmonious-looking website and UI design.</description>
-    </item>
-    
-    <item>
-      <title>Prototyping with markdown</title>
-      <link>https://aakash-ez.github.io/indicLP-docs/blog/prototyping/</link>
-      <pubDate>Sun, 02 Apr 2017 22:01:15 +0100</pubDate>
-      
-      <guid>https://aakash-ez.github.io/indicLP-docs/blog/prototyping/</guid>
-      <description>I have been working on a large set of documentation for a prototype that will eventually make it into a product. One issue with the publishing system at my company is that it makes doing prototypes, or really anything not within the rigidly and narrowly scoped model, difficult to set up. It takes a lot of work just to get to the point where you can begin writing.Since time was of the essence and writing is expensive, I decided to do the prototype outside of the publishing system.</description>
+      <guid>https://aakash-ez.github.io/indicLP-docs/blog/transliteration/</guid>
+      <description>Getting Started Transliteration is a topic that&amp;rsquo;s not often brought up in NLP tasks as more often than not we are dealing with corpus that contain latin text, thus making it standard. However this is not the case when deal with Indic Languages as more often than not we can have text from various scripts in our corpus. These could english translation of some words, quotes from other languages etc.</description>
     </item>
     
     <item>

@@ -9,12 +9,13 @@
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/docs/custom-plugins/</loc>
   </url><url>
+    <loc>https://aakash-ez.github.io/indicLP-docs/blog/word-embedding/</loc>
+    <lastmod>2021-10-29T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/docs/typography/</loc>
   </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/blog/typography/</loc>
-  </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/blog/prototyping/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
+    <loc>https://aakash-ez.github.io/indicLP-docs/blog/transliteration/</loc>
+    <lastmod>2021-10-29T00:01:00+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/docs/grid/</loc>
   </url><url>
@@ -82,31 +83,16 @@
     <lastmod>2017-04-10T16:43:30+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/blog/</loc>
-    <lastmod>2021-10-29T00:00:00+01:00</lastmod>
+    <lastmod>2021-10-29T00:01:00+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/</loc>
-    <lastmod>2021-10-29T00:00:00+01:00</lastmod>
+    <lastmod>2021-10-29T00:01:00+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/docs/</loc>
     <lastmod>2017-04-10T16:43:36+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/categories/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
-  </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/categories/design/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
-  </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/tags/hugo/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
-  </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/tags/markdown/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
-  </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/tags/prototype/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
-  </url><url>
-    <loc>https://aakash-ez.github.io/indicLP-docs/tags/</loc>
-    <lastmod>2017-04-02T22:01:15+01:00</lastmod>
+    <lastmod>2017-04-02T21:56:55+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/tags/example/</loc>
     <lastmod>2017-04-02T21:56:55+01:00</lastmod>
@@ -115,6 +101,12 @@
     <lastmod>2017-04-02T21:56:55+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/blog/inline-style/</loc>
+    <lastmod>2017-04-02T21:56:55+01:00</lastmod>
+  </url><url>
+    <loc>https://aakash-ez.github.io/indicLP-docs/tags/markdown/</loc>
+    <lastmod>2017-04-02T21:56:55+01:00</lastmod>
+  </url><url>
+    <loc>https://aakash-ez.github.io/indicLP-docs/tags/</loc>
     <lastmod>2017-04-02T21:56:55+01:00</lastmod>
   </url><url>
     <loc>https://aakash-ez.github.io/indicLP-docs/faq/</loc>
