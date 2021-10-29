@@ -36,32 +36,5 @@
       <description>Getting Started Transliteration is a topic that&amp;rsquo;s not often brought up in NLP tasks as more often than not we are dealing with corpus that contain latin text, thus making it standard. However this is not the case when deal with Indic Languages as more often than not we can have text from various scripts in our corpus. These could english translation of some words, quotes from other languages etc.</description>
     </item>
     
-    <item>
-      <title>Messages</title>
-      <link>https://aakash-ez.github.io/indicLP-docs/blog/messages/</link>
-      <pubDate>Mon, 10 Apr 2017 16:41:34 +0100</pubDate>
-      
-      <guid>https://aakash-ez.github.io/indicLP-docs/blog/messages/</guid>
-      <description>UsageYou have 2 modules waiting to installation. Install &amp;lt;div class=&#34;message&#34; data-component=&#34;message&#34;&amp;gt; ... &amp;lt;span class=&#34;close small&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;You have 2 modules waiting to installation. Install &amp;lt;div class=&#34;message error&#34; data-component=&#34;message&#34;&amp;gt; ... &amp;lt;span class=&#34;close small&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;You have 2 modules waiting to installation. Install &amp;lt;div class=&#34;message success&#34; data-component=&#34;message&#34;&amp;gt; ... &amp;lt;span class=&#34;close small&#34;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;Warning!You have 2 modules waiting to installation. Install &amp;lt;div class=&#34;message warning&#34;</description>
-    </item>
-    
-    <item>
-      <title>Collapse</title>
-      <link>https://aakash-ez.github.io/indicLP-docs/blog/collapse/</link>
-      <pubDate>Mon, 10 Apr 2017 16:42:50 +0100</pubDate>
-      
-      <guid>https://aakash-ez.github.io/indicLP-docs/blog/collapse/</guid>
-      <description>BaseItem 1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
-    </item>
-    
-    <item>
-      <title>Inline 🐣Text Styles</title>
-      <link>https://aakash-ez.github.io/indicLP-docs/blog/inline-style/</link>
-      <pubDate>Sun, 02 Apr 2017 21:56:55 +0100</pubDate>
-      
-      <guid>https://aakash-ez.github.io/indicLP-docs/blog/inline-style/</guid>
-      <description>Chocolate tiramisu pastry a link cotton candy sesame snaps. Dessert cake chocolate bar a bold part sugar plum bonbon marshmallow lollipop toffee soufflé. Donut caramels chocolate bar. Oat cake cookie a marked part cheesecake donut. Jelly-o $code marzipan cake. Bonbon sesame snaps chocolate an italic part oat cake pudding sweet roll caramels bonbon. Soufflé muffin 👻 gummies sugar plum dessert bonbon bear claw. Sweet ice cream jujubes. Marzipan sugar plum pastry chocolate ⌘+A bar fruitcake.</description>
-    </item>
-    
   </channel>
 </rss>
