@@ -133,6 +133,26 @@ Example# coding:utf-8from indicLP.transliterate import Transliteratehi2ta = T
     </item>
     
     <item>
+      <title>BahdanauAttention</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/bahdanau-attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/bahdanau-attention/</guid>
+      <description>Getting StartedBahdanau or Additive Attention layer for pytorch has been implemented, as it often plays a crucial part in NLP.
+Exampleclass BahdanauAttention(torch.nn.Module):def __init__(self, encoder_dim, decoder_dim):super().__init__()self.encoder_dim = encoder_dimself.decoder_dim = decoder_dimself.V = torch.nn.Parameter(torch.rand(self.decoder_dim))self.W1 = torch.nn.Linear(self.decoder_dim, self.decoder_dim)self.W2 = torch.nn.Linear(self.encoder_dim, self.decoder_dim)def forward(self, query, values):weights = self._get_weights(query,values)weights = torch.nn.functional.softmax(weights, dim = 0)return weights @ valuesdef _get_weights(self, query, values):query = query.</description>
+    </item>
+    
+    <item>
+      <title>LuongAttention</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/luong-attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/luong-attention/</guid>
+      <description>Getting StartedLuong or Multiplicative Attention layer for pytorch has been implemented, as it often plays a crucial part in NLP.
+Exampleclass LuongAttention(torch.nn.Module):def __init__(self, encoder_dim: int, decoder_dim: int):super().__init__(encoder_dim, decoder_dim)self.W = torch.nn.Parameter(torch.FloatTensor(self.decoder_dim, self.encoder_dim).uniform_(-0.1, 0.1))def forward(self, query, values):weights = self._get_weights(query,values)weights = torch.nn.functional.softmax(weights, dim = 0)return weights @ valuesdef _get_weights(self, query, values):weights = query @ self.W @ values.Treturn weights/np.sqrt(self.decoder_dim)Reference MaterialsFollowing are some reference materials for Preprocessing module</description>
+    </item>
+    
+    <item>
       <title>Word Embedding</title>
       <link>https://aakash-ez.github.io/indicLP-docs/blog/word-embedding/</link>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0100</pubDate>

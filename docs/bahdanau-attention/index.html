@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.87.0" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> BahdanauAttention </title>
+
+  
+  <meta name="description" content="PyTorch Attention module part of torch.nn"> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="Aakash and Adityan">
+
+
+  <meta property="og:title" content="BahdanauAttention" />
+<meta property="og:description" content="PyTorch Attention module part of torch.nn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aakash-ez.github.io/indicLP-docs/docs/bahdanau-attention/" /><meta property="article:section" content="docs" />
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+  
+
+  <link rel="canonical" href="https://aakash-ez.github.io/indicLP-docs/docs/bahdanau-attention/">  
+
+  <link rel="shortcut icon" type="image/png" href="/indicLP-docs/img/favicons/favicon.png">
+
+
+  <link href="/indicLP-docs/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/indicLP-docs/css/main.css" rel="stylesheet" type="text/css">
+  
+
+ <link href="/indicLP-docs/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/indicLP-docs/js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+
+  <script type="text/javascript" src="/indicLP-docs/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">indicLP</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/indicLP-docs" title="home">indicLP</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li><a href="/indicLP-docs/blog/" >Blog</a></li>
+    
+    <li><a href="/indicLP-docs/docs/" >Docs</a></li>
+    
+    <li><a href="/indicLP-docs/faq/" >Faq</a></li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra"> 
+      <ul>
+          
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+  <div id="main">
+    <div id="hero">
+      <h1> BahdanauAttention </h1>
+      <p class="hero-lead">
+           PyTorch Attention module part of torch.nn of indicLP library.
+      </p>
+
+    </div> 
+    <div id="kube-component" class="content">
+    
+<nav id="contents">
+    <ol class="js-toc">
+    </ol>
+</nav>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded",
+function(){
+tocbot.init({
+
+tocSelector: '.js-toc',
+
+contentSelector: '.content',
+
+headingSelector: 'h3'
+})
+}
+);
+</script>
+
+
+
+    
+
+
+<h3 class="section-head" id="h-basic-template"><a href="#h-basic-template">Getting Started</a></h3>
+
+<p>Bahdanau or Additive Attention layer for pytorch has been implemented, as it often plays a crucial part in NLP.</p>
+
+
+<h5>Example</h5>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">BahdanauAttention</span>(torch<span style="color: #333333">.</span>nn<span style="color: #333333">.</span>Module):
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>, encoder_dim, decoder_dim):
+        <span style="color: #007020">super</span>()<span style="color: #333333">.</span>__init__()
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>encoder_dim <span style="color: #333333">=</span> encoder_dim
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>decoder_dim <span style="color: #333333">=</span> decoder_dim
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>V <span style="color: #333333">=</span> torch<span style="color: #333333">.</span>nn<span style="color: #333333">.</span>Parameter(torch<span style="color: #333333">.</span>rand(<span style="color: #007020">self</span><span style="color: #333333">.</span>decoder_dim))
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>W1 <span style="color: #333333">=</span> torch<span style="color: #333333">.</span>nn<span style="color: #333333">.</span>Linear(<span style="color: #007020">self</span><span style="color: #333333">.</span>decoder_dim, <span style="color: #007020">self</span><span style="color: #333333">.</span>decoder_dim)
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>W2 <span style="color: #333333">=</span> torch<span style="color: #333333">.</span>nn<span style="color: #333333">.</span>Linear(<span style="color: #007020">self</span><span style="color: #333333">.</span>encoder_dim, <span style="color: #007020">self</span><span style="color: #333333">.</span>decoder_dim)
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">forward</span>(<span style="color: #007020">self</span>, query, values):
+        weights <span style="color: #333333">=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>_get_weights(query,values)
+        weights <span style="color: #333333">=</span> torch<span style="color: #333333">.</span>nn<span style="color: #333333">.</span>functional<span style="color: #333333">.</span>softmax(weights, dim <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>)
+        <span style="color: #008800; font-weight: bold">return</span> weights <span style="color: #FF0000; background-color: #FFAAAA">@</span> values
+
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">_get_weights</span>(<span style="color: #007020">self</span>, query, values):
+        query <span style="color: #333333">=</span> query<span style="color: #333333">.</span>repeat(values<span style="color: #333333">.</span>size(<span style="color: #0000DD; font-weight: bold">0</span>), <span style="color: #0000DD; font-weight: bold">1</span>)
+        weights <span style="color: #333333">=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>W1(query) <span style="color: #333333">+</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>W2(values)
+        <span style="color: #008800; font-weight: bold">return</span> torch<span style="color: #333333">.</span>tanh(weights) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>V 
+</pre></div>
+
+<br>
+<h3 class="section-head" id="h-supported-browsers"><a href="#h-supported-browsers">Reference Materials</a></h3>
+
+<p>Following are some reference materials for Preprocessing module</p>
+<ul>
+    <li><a href="https://arxiv.org/pdf/1409.0473.pdf" style="color: inherit;text-decoration: inherit;"><b>Bahdanau Attention: </b></a>
+    Base paper for Bahdanau Attention, Neural Machine Translation By Jointly Learning To Align And Translate.</li>
+    <li><a href="https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html" style="color: inherit;text-decoration: inherit;"><b>Pytorch Seq2Seq Translation Tutorial: </b></a>
+    NLP From Scratch: Translation With A Sequence To Sequence Network And Attention.</li>
+</ul>
+
+
+
+
+
+    
+    </div>
+    </div>
+    </main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li><span>indicLP</span></li>
+        <li>
+          <a href="/indicLP-docs/blog/">Blog</a>
+        </li>
+          <li>
+          <a href="/indicLP-docs/docs/">Docs</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/">Give a shout-out on Twitter!</a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; Licence MIT.</p>
+  </footer> </footer>
+
+
+  <script src="/indicLP-docs/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/indicLP-docs/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/indicLP-docs/js/main.js" type="text/javascript">
+  </script>
+</body>
+
+</html>
