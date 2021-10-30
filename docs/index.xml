@@ -99,5 +99,27 @@ Example# coding:utf-8from indicLP.preproccessing import Embeddinglanguage = &
 Example# coding:utf-8from indicLP.preproccessing import Embeddinglanguage = &amp;quot;ta&amp;quot;word = &amp;quot;பள்ளி&amp;quot;embedder = Embedding(lang=language)for i in closest:(word, score) = iprint(word,round(score,2))# பாடசாலை 0.87# உயர்நில் 0.86# கல்லூரி 0.85# பாடசால் 0.84# உயர்நிலைப்பள்ளி 0.81# மேல்நில் 0.81# பள்ளிக்கூடம் 0.79# கல் 0.78# மாண 0.77# படிப்பு 0.</description>
     </item>
     
+    <item>
+      <title>Convert - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/convert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/convert/</guid>
+      <description>Getting StartedConvert function performs the task of transliteration, from one script to another. This is built on top of indic-transliteration library.
+Example# coding:utf-8from indicLP.transliterate import Transliteratehi2ta = Transliterate(&amp;quot;hi&amp;quot;,&amp;quot;ta&amp;quot;)print(hi2ta.convert(&amp;quot;आदमी&amp;quot;))# Output is ஆதமீen2hi = Transliterate(&amp;quot;en&amp;quot;,&amp;quot;hi&amp;quot;)print(en2hi.convert(&amp;quot;aadamii&amp;quot;))# Output is आदमीInput ArgumentsFollowing are the input arguments to be provided while using convert method:
+data: A string representing the word which has to be transliterated.</description>
+    </item>
+    
+    <item>
+      <title>Revert - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/revert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/revert/</guid>
+      <description>Getting StartedRevert function performs the task of transliteration, back to the original script. This is built on top of indic-transliteration library.
+Example# coding:utf-8from indicLP.transliterate import Transliteratehi2ta = Transliterate(&amp;quot;hi&amp;quot;,&amp;quot;ta&amp;quot;)en2hi = Transliterate(&amp;quot;en&amp;quot;,&amp;quot;hi&amp;quot;)text = hi2ta.convert(&amp;quot;आदमी&amp;quot;)print(text,hi2ta.revert(text))# Output is ஆதமீ आधमीtext = en2hi.convert(&amp;quot;AdamI&amp;quot;)print(text,en2hi.revert(text))# Output is आदमी AdamIInput ArgumentsFollowing are the input arguments to be provided while using revert method:
+data: A string representing the word which has to be reverted back.</description>
+    </item>
+    
   </channel>
 </rss>
