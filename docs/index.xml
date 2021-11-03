@@ -141,5 +141,16 @@ Exampleclass BahdanauAttention(torch.nn.Module):def __init__(self, encoder_dim
 Exampleclass LuongAttention(torch.nn.Module):def __init__(self, encoder_dim: int, decoder_dim: int):super().__init__(encoder_dim, decoder_dim)self.W = torch.nn.Parameter(torch.FloatTensor(self.decoder_dim, self.encoder_dim).uniform_(-0.1, 0.1))def forward(self, query, values):weights = self._get_weights(query,values)weights = torch.nn.functional.softmax(weights, dim = 0)return weights @ valuesdef _get_weights(self, query, values):weights = query @ self.W @ values.Treturn weights/np.sqrt(self.decoder_dim)Reference MaterialsFollowing are some reference materials for Preprocessing module</description>
     </item>
     
+    <item>
+      <title>Load Dataset - Method</title>
+      <link>https://aakash-ez.github.io/indicLP-docs/docs/load-dataset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aakash-ez.github.io/indicLP-docs/docs/load-dataset/</guid>
+      <description>Getting StartedDownload and load corpora and datasets directly in your program using
+Examplefrom indicLP.datasets import Datasetfrom indicLP.utils import SentenceIteratordt = Dataset()data = dt.load_dataset(&amp;quot;ponniyin-selvan&amp;quot;,True)sentenceIterator = SentenceIterator(data[0],&amp;quot;\\n&amp;quot;)count = 0for i in sentenceIterator:print(i)count += 1if count == 5:breakInput ArgumentsFollowing are the input arguments to be provided while using get_vector method:
+dataset_name (string): Name of the dataset to be loaded.</description>
+    </item>
+    
   </channel>
 </rss>
